@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    font-family: Arial;
+    border:border-box;
+}
+.navbar{
+    background:linear-gradient(45deg,grey,red);
+    font-family: 'Borel', cursive;
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+}
+.game-container{
+    display: flex;
+    justify-content: center;
+    margin-top:50px;
+}
+.game-grid{
+    display:grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Bungee Spice', cursive;
+}
+.boxtext{
+    font-family: 'Bungee Spice', cursive;   
+}
+.box{
+    border:2px solid black;
+    font-size: 8vw  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(227, 221, 219);
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.game-info{
+    padding: 0 34px;
+    font-family: 'Foldit', cursive;
+    font-size: 100px;
+}
+.info{
+    padding: 0;
+    font-size: 1rem;
+    
+}
+.imgbox img{
+    width:0px;
+    transition:widht ease-in-out;
+}
+
+#reset{
+    margin: 10px;
+    padding: 0px 20px 0px 20px;
+    background-color: lightgreen;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: 'Lakki Reddy', cursive;
+}
+.line{
+    background-color: black;
+}
+
+@media screen and (max-width: 950px) {
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .game-info{
+        margin-top: 34px;
+    }
+    .game-info h1{
+        font-size: 1.5rem;
+    }
+    .game-grid{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+}
